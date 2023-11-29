@@ -1,6 +1,6 @@
 //https://github.com/DrewGregorySMU/zyLab-28.15 
 //Drew Gregory
-//Luke Berr
+//Luke Berridge
 #include <iostream>
 #include "PlaylistNode.h"
 
