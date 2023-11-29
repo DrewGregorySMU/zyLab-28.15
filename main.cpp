@@ -36,7 +36,16 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
     //creating new song and current node to add it to the back
     PlaylistNode* newSong = new PlaylistNode(id, name, artistName, songLen);
     PlaylistNode* currNode = headNode;
-    while()
+
+   //loop to get to the last node in the playlist
+    while(currNode->GetNext() != nullptr){
+        currNode = currNode->GetNext();
+    }
+    //add song to the end of the playlist
+    currNode->InsertAfter(newSong);
+
+      
+      
 
    }
    else if(option == 'd'){
