@@ -43,10 +43,15 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
 
    }
    else if(option == 'c'){
-    
+    //Luke function
    }
    else if(option == 's'){
-    
+    //Luke function
+   }
+   else if(option == 't'){
+   //Luke function
+
+      
    }
    else if(option == 'o'){
     //outputs the full playlist
