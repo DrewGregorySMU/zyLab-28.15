@@ -49,7 +49,33 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
 
    }
    else if(option == 'd'){
+    //prompting user for ID to locate song which needs to be deleted
+    string ID;
+    cout << "Enter song's unique ID: " << endl;
+    cin >> ID;
+    //intialize a count to see if the head node is deleted
+    int count = 0;
 
+    //create a node to loop through and find deleted song
+    PlaylistNode* currSong = headNode;
+    
+    //create a node before the match to store for deletion
+    PlaylistNode* lastSong = nullptr;
+
+
+    //loops until current song matches the ID
+    while(currSong->GetID != ID){
+        lastSong = currSong;
+        currSong = currSong->GetNext();
+
+    }
+    //links the song before deletion to the song after the deleted song
+    lastSong->SetNext(currSong->GetNext());
+
+    //deallocates memory for the song that matches the ID
+    delete currSong;
+    
+      
    }
    else if(option == 'c'){
     //Luke function
