@@ -49,6 +49,7 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
     //Luke function
    }
    else if(option == 't'){
+      //function to output time
    //Luke function
 
       
