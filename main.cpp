@@ -82,6 +82,23 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
    }
    else if(option == 's'){
     //Luke function
+    cout << "OUTPUT SONGS BY SPECIFIC ARTIST" << endl;
+    cout << "Enter artist's name:" << endl;
+
+    string artistToSearch;
+    cin >> artistToSearch;
+
+    PlaylistNode* currentPointer = headNode;
+    int songCount = 1;
+    
+    while (currentPointer != nullptr) {
+        if (currentPointer->GetArtistName() == artistToSearch) {
+            cout << songCount << "." << endl;
+            currentPointer->PrintPlaylistNode();
+        }
+        currentPointer = currentPointer->GetNext();
+        songCount++;
+   }
    }
    else if(option == 't'){
       //function to output time
