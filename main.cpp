@@ -99,18 +99,21 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
         currentPointer = currentPointer->GetNext();
         songCount++;
    }
+      return headNode;
    }
    else if(option == 't'){
       //function to output time
    //Luke function
-    cout << "OUTPUT TOTAL TIME OF PLAYLIST (IN SECONDS)" << endl;
-    int totalTime = 0;
-    PlaylistNode* currentPointer = headNode;
-    while (currentPointer != nullptr) {
-        totalTime += currentPointer->GetSongLength();
-        currentPointer = currentPointer->GetNext();
-    }
-    cout << "Total time: " << totalTime << " seconds" << endl;
+       cout << "OUTPUT TOTAL TIME OF PLAYLIST (IN SECONDS)" << endl;
+       int totalTime = 0;
+       PlaylistNode* currentPointer = headNode;
+       while (currentPointer != nullptr) {
+           totalTime += currentPointer->GetSongLength();
+           currentPointer = currentPointer->GetNext();
+       }
+       cout << "Total time: " << totalTime << " seconds" << endl;
+       return headNode;  
+      
       
    }
    else if(option == 'o'){
