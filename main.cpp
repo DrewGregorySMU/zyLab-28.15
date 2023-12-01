@@ -65,7 +65,9 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
    else if(option == 'd'){
     //prompting user for ID to locate song which needs to be deleted
     string ID;
-    cout << "Enter song's unique ID: " << endl;
+    cout << endl;
+    cout << "REMOVE SONG" << endl;
+    cout << "Enter song's unique ID:" << endl;
     cin >> ID;
     //intialize a count to see if the head node is deleted
     int count = 0;
@@ -87,6 +89,7 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
     //checks if the deleted node is the head node
     if(count == 0){
         PlaylistNode* newHead = headNode->GetNext();
+        cout << "\"" << headNode->GetSongName() << "\" removed." << endl;
         delete headNode;
         return newHead;
     }
@@ -94,8 +97,10 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
     lastSong->SetNext(currSong->GetNext());
 
     //deallocates memory for the song that matches the ID
-    delete currSong;
     
+
+    cout << "\"" << currSong->GetSongName() << "\" removed." << endl;
+    delete currSong;
     
 
     return headNode;
@@ -144,7 +149,8 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
    else if(option == 'o'){
     //outputs the full playlist
     if(headNode == nullptr){
-        cout << "Playlist is empty";
+        cout << playlistTitle << " - OUTPUT FULL PLAYLIST" << endl;
+        cout << "Playlist is empty" << endl;
         return headNode;
     }
     
@@ -204,9 +210,4 @@ int main() {
    return 0;
 }
 
-
-
-   
-   return 0;
-}
 
