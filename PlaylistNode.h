@@ -5,7 +5,7 @@ class PlaylistNode{
 
     public:
         PlaylistNode();
-        PlaylistNode(string idName = "none", string sName = "none", string artName = "none", int sLength = 0, PlaylistNode* nextPtr = nullptr); 
+        PlaylistNode(string idName, string sName, string artName, int sLength, PlaylistNode* nextPtr = nullptr); 
         string GetID();
         string GetSongName();
         string GetArtistName();
