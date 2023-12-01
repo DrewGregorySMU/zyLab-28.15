@@ -64,7 +64,7 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
 
 
     //loops until current song matches the ID
-    while(currSong->GetID != ID){
+    while(currSong->GetID() != ID){
         lastSong = currSong;
         currSong = currSong->GetNext();
 
@@ -157,7 +157,7 @@ int main() {
     cin >> choice;
    }
    while(choice != 'q'){
-    head = ExecuteMenu(char choice, string playlistTitle, PlaylistNode* head);
+    head = ExecuteMenu(choice, playlistTitle, head);
     cout << "Choose an option:" << endl;
     cin >> choice;
    }
